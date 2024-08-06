@@ -12,12 +12,11 @@ export const Confirmar = () => {
     // Capturar el token de la URL 
     const { token } = useParams();
     const [mensaje, setMensaje] = useState({})
-
     const verifyToken = async()=>{
         // TRY-CATCH
         try {
             // URL BACKEND
-            const url = `${import.meta.env.VITE_BACKEND_URL}/confirmar/${token}`
+            const url = `${import.meta.env.VITE_BACKEND_URL}/user/confirmation/${token}`
             // RESPUESTA
             const respuesta = await axios.get(url)
             // SETEAR EN EL STATE MENSAJE - OK

@@ -60,7 +60,7 @@ const sendMailToRecoveryPassword = async(userMail,token)=>{
     to: userMail,
     subject: "Correo para reestablecer tu contraseña",
     html: `
-    <h1>Sistema de gestión (Viables del DM de Quito 🚗)</h1>
+    <h1>Sistema de gestión (Viales del DM de Quito 🚗)</h1>
     <hr>
     <a href=${process.env.URL_FRONTEND}recuperar-password/${token}>Clic para reestablecer tu contraseña</a>
     <hr>
@@ -79,8 +79,7 @@ const sendMailToRecoveryPasswordUser = async(userMail,token)=>{
     html: `
     <h1>Sistema de gestión (Viables del DM de Quito 🚗)</h1>
     <hr>
-    <a href=${process.env.URL_FRONTEND}confirmar/${token}>Clic para confirmar tu cuenta</a>
-    <hr>
+    <a href=${process.env.URL_FRONTEND}recuperar-password/${token}>Clic para reestablecer tu contraseña</a>
     <footer>Grandote te da la Bienvenida!</footer>
     `
     });

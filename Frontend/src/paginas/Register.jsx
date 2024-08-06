@@ -8,8 +8,8 @@ export const Register = () => {
 
     const [form, setform] = useState(
         {
-        nombre: "",
-        apellido: "",
+        name: "",
+        lastname: "",
         telefono: "",
         email: "",
         password: ""
@@ -77,15 +77,15 @@ export const Register = () => {
 
                 <div className="mb-3">
                     <label className="mb-2 block text-sm font-semibold" htmlFor="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name='nombre'
-                    value={form.nombre || ""} onChange={handleChange}
+                    <input type="text" id="nombre" name='name'
+                    value={form.name || ""} onChange={handleChange}
                     placeholder="Ingresa tu nombre" className="block w-full rounded-md border border-gray-300 focus:border-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-700 py-1 px-1.5 text-gray-500" required />
                 </div>
 
                 <div className="mb-3">
                     <label className="mb-2 block text-sm font-semibold" htmlFor="apellido">Apellido:</label>
-                    <input type="text" id="apellido" name='apellido'
-                    value={form.apellido || ""} onChange={handleChange}
+                    <input type="text" id="apellido" name='lastname'
+                    value={form.lastname|| ""} onChange={handleChange}
                     placeholder="Ingresa tu apellido" className="block w-full rounded-md border border-gray-300 focus:border-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-700 py-1 px-1.5 text-gray-500" required />
                 </div>
 

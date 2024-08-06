@@ -3,7 +3,10 @@ import { useState } from 'react'
 import axios from 'axios';
 import Mensaje from '../componets/Alertas/Mensaje';
 
-/* const [mensaje, setMensaje] = useState({})
+
+export const Forgot = () => {
+
+    const [mensaje, setMensaje] = useState({})
 	const [mail, setMail] = useState({})
     
     const handleChange = (e)=>{
@@ -17,16 +20,15 @@ import Mensaje from '../componets/Alertas/Mensaje';
         e.preventDefault()
 
         try {
-            const url = `${import.meta.env.VITE_BACKEND_URL}/recuperar-password`
+            const url = `${import.meta.env.VITE_BACKEND_URL}/user/recover-password`
             const respuesta = await axios.post(url,mail)
             setMensaje({respuesta:respuesta.data.msg,tipo:true})
             setMail("")
         } catch (error) { 
             setMensaje({respuesta:error.response.data.msg,tipo:false})
         }
-    } */
+    }
 
-export const Forgot = () => {
     return (
         <>
             <div className="bg-white flex justify-center items-center w-1/2">
@@ -67,7 +69,7 @@ export const Forgot = () => {
 
             </div>
 
-            <div className="w-1/2 h-screen bg-[url('/public/images/catforgot.jpg')] 
+            <div className="w-1/2 h-screen bg-[url('/public/images/senales.png')] 
             bg-no-repeat bg-cover bg-center sm:block hidden
             ">
             </div>

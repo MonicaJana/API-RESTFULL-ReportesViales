@@ -90,7 +90,6 @@ const registro = async (req, res) => {
 }
 
 const confirmarEmail = async (req, res) => {
-
     //ACTIIVIDAD 1
     if (!req.params.token)
         return res
@@ -103,8 +102,8 @@ const confirmarEmail = async (req, res) => {
         return res.status(404).json({ msg: "La cuenta ya ha sido confirmada" });
 
     //ACTIIVIDAD 3
-    usersBDD.confirmarEmail = true;
     usersBDD.token = null;
+    usersBDD.confirmarEmail = true;
     await usersBDD.save();
 
     //ACTIIVIDAD 4
